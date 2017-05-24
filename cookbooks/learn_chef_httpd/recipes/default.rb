@@ -6,6 +6,12 @@
 #
 #
 #
+bash 'Updating system' do
+
+    code <<-EOH
+  	yum update -y
+     EOH
+end
 yum_package 'httpd' do
   action :install
 end
